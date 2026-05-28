@@ -1,0 +1,171 @@
+body {
+
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #050505;
+
+    font-family: Arial, sans-serif;
+
+    overflow: hidden;
+}
+
+.calculator {
+
+    width: 400px;
+
+    padding: 30px;
+
+    border-radius: 30px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.72),
+            rgba(0,0,0,0.82)
+        ),
+        url("./assets/trex-dark.png");
+
+    background-size: cover;
+
+    background-position: center;
+
+    border: 2px solid rgba(255,0,0,0.25);
+
+    box-shadow:
+        0 0 40px rgba(255,0,0,0.25),
+        0 0 100px rgba(0,0,0,0.95);
+
+    backdrop-filter: blur(5px);
+}
+
+@keyframes glow {
+    from {
+        box-shadow:
+            0 0 20px rgba(255, 0, 0, 0.3),
+            0 0 50px rgba(0, 0, 0, 0.8);
+    }
+
+    to {
+        box-shadow:
+            0 0 35px rgba(255, 0, 0, 0.6),
+            0 0 70px rgba(0, 0, 0, 1);
+    }
+}
+
+.title {
+    text-align: center;
+
+    color: #ff3b3b;
+
+    font-size: 28px;
+
+    margin-bottom: 20px;
+
+    letter-spacing: 3px;
+
+    text-shadow:
+        0 0 10px red,
+        0 0 20px darkred;
+}
+
+#display {
+    width: 100%;
+    height: 70px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    margin-bottom: 20px;
+
+    padding-right: 15px;
+
+    font-size: 32px;
+
+    text-align: right;
+
+    background: #111;
+
+    color: #ff4d4d;
+
+    box-shadow:
+        inset 0 0 10px black,
+        0 0 10px rgba(255,0,0,0.2);
+}
+
+.buttons {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 12px;
+}
+
+button {
+    height: 65px;
+
+    border: none;
+
+    border-radius: 15px;
+
+    font-size: 24px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    color: white;
+
+    background:
+    linear-gradient(
+        145deg,
+        rgba(20,20,20,0.92),
+        rgba(60,0,0,0.88)
+    );
+
+    box-shadow:
+        5px 5px 10px #000,
+        -2px -2px 5px rgba(255,255,255,0.05);
+
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: scale(1.05);
+
+    background:
+        linear-gradient(145deg, #330000, #660000);
+
+    box-shadow:
+        0 0 15px red;
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+.operator {
+    color: #ff6961;
+}
+
+.equal {
+    background:
+        linear-gradient(145deg, #990000, #ff0000);
+
+    color: white;
+}
+
+.equal:hover {
+    box-shadow:
+        0 0 20px red;
+}

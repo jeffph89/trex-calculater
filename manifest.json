@@ -1,0 +1,8 @@
+{
+  "name": "T-REX Calculator",
+  "short_name": "T-REX",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#ff6a00"
+}
